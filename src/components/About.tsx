@@ -5,7 +5,6 @@ import { GraduationCap, Award, Heart, Users, Lightbulb, Target } from "lucide-re
 const About = () => {
   const skills = [
     { category: "Design Tools", items: ["Figma", "Adobe XD", "Photoshop", "Illustrator"] },
-    { category: "Development", items: ["HTML5", "CSS3", "JavaScript", "React"] },
     { category: "Prototyping", items: ["InVision", "Framer", "Principle", "Marvel"] },
     { category: "Research", items: ["User Testing", "Analytics", "Wireframing", "Journey Mapping"] }
   ];

@@ -27,19 +27,6 @@ const Services = () => {
       iconColor: "text-primary"
     },
     {
-      icon: Code,
-      title: "Web Development",
-      description: "Building responsive, performant websites using modern technologies and best practices for optimal user experience.",
-      features: [
-        "Responsive Development",
-        "HTML5/CSS3/JavaScript",
-        "React Applications",
-        "Performance Optimization"
-      ],
-      color: "bg-accent/10",
-      iconColor: "text-accent"
-    },
-    {
       icon: Zap,
       title: "Prototyping & Interaction",
       description: "Creating interactive prototypes and testing user interactions to validate design concepts before development.",
@@ -92,7 +79,7 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Services</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive design and development services to bring your digital vision to life
+            Comprehensive design services to bring your digital vision to life
           </p>
         </div>
 

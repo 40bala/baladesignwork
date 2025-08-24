@@ -47,7 +47,7 @@ const Portfolio = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Portfolio</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Featured projects showcasing my expertise in UI/UX design and development
+            Featured projects showcasing my expertise in UI/UX design
           </p>
         </div>
 
