@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import balaProfile from "@/assets/bala-profile.jpg";
+import balaProfileReal from "@/assets/bala-profile-real.png";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -63,7 +63,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-custom-lg border-4 border-white/20 hover-lift">
                 <img 
-                  src={balaProfile} 
+                  src={balaProfileReal} 
                   alt="Bala P - UI/UX Designer" 
                   className="w-full h-full object-cover"
                 />
