@@ -2,41 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Portfolio Design System for Bala - UI/UX Designer */
 
 @layer base {
   :root {
+    /* Brand Colors - Professional Portfolio Theme */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 223 84% 5%;
+    
+    /* Purple-Blue Gradient Theme */
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 258 90% 56%;
+    
+    /* Orange Accent Colors */
+    --accent: 35 91% 62%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 35 91% 52%;
+    
+    /* Card & Surface Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --card-foreground: 223 84% 5%;
+    --card-hover: 258 25% 97%;
+    
+    /* Secondary Colors */
+    --secondary: 258 30% 94%;
+    --secondary-foreground: 223 84% 5%;
+    
+    /* Muted Colors */
+    --muted: 258 15% 96%;
+    --muted-foreground: 223 16% 47%;
+    
+    /* Utility Colors */
+    --border: 258 20% 90%;
+    --input: 258 20% 90%;
+    --ring: 258 90% 66%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Design System Variables */
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(258 90% 66%), hsl(243 75% 59%));
+    --gradient-secondary: linear-gradient(135deg, hsl(258 30% 94%), hsl(0 0% 100%));
+    --gradient-accent: linear-gradient(135deg, hsl(35 91% 62%), hsl(45 93% 58%));
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px -1px hsl(258 90% 66% / 0.1);
+    --shadow-md: 0 8px 25px -5px hsl(258 90% 66% / 0.15);
+    --shadow-lg: 0 20px 50px -12px hsl(258 90% 66% / 0.25);
+    --shadow-accent: 0 8px 25px -5px hsl(35 91% 62% / 0.25);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +120,77 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Gradient Backgrounds */
+  .hero-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .accent-gradient {
+    background: var(--gradient-accent);
+  }
+  
+  /* Custom Shadows */
+  .shadow-custom {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+  
+  /* Smooth Transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+  
+  /* Interactive Elements */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Portfolio Showcase Animations */
+  .portfolio-item {
+    transition: var(--transition-spring);
+  }
+  
+  .portfolio-item:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Skills Grid Animations */
+  .skill-card {
+    transition: var(--transition-smooth);
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-2px);
+    background: hsl(var(--card-hover));
   }
 }
