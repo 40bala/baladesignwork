@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import balaProfileReal from "@/assets/bala-profile-real.png";
 
@@ -68,8 +69,8 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Decorative ring */}
-              <div className="absolute -inset-4 rounded-full border border-accent/30 animate-pulse"></div>
+              {/* Larger decorative ring */}
+              <div className="absolute -inset-8 rounded-full border-2 border-accent/40 animate-pulse"></div>
             </div>
           </div>
         </div>
