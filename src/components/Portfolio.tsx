@@ -21,7 +21,7 @@ const Portfolio = () => {
       title: "Sport Management Platform", 
       category: "Web Application",
       description: "Comprehensive dashboard system for athletes, coaches, and teams to manage training schedules, performance analytics, and team communication.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&crop=center",
+      image: "https://i.postimg.cc/RZWNMgGd/Sports-management.png",
       tags: ["Dashboard Design", "Analytics", "Team Management", "React"],
       challenges: "Designing for multiple user roles with different data needs and permissions",
       solution: "Created role-based dashboards with customizable widgets and clear information architecture",
