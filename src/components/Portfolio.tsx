@@ -10,7 +10,7 @@ const Portfolio = () => {
       title: "Cryptocurrency Portfolio App",
       category: "Mobile App Design",
       description: "A clean, intuitive mobile application for managing cryptocurrency portfolios with real-time tracking, advanced analytics, and secure wallet integration.",
-      image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop&crop=center",
+      image: "https://i.postimg.cc/7hfwLwfs/Funky-theme-crypto.png",
       tags: ["UI/UX Design", "Mobile App", "Fintech", "React Native"],
       challenges: "Creating a trustworthy interface for financial data while maintaining simplicity",
       solution: "Implemented clear visual hierarchy, secure authentication flows, and intuitive data visualization",
