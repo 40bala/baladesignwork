@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import balaProfileReal from "@/assets/bala-profile-real.png";
 const Hero = () => {
@@ -54,8 +55,8 @@ const Hero = () => {
               <div className="w-60 h-80 lg:max-w-80 lg:w-7 w-7/12 w-72 rounded-br-full max-w-72 w-72 max-w-7xl rounded-full ">
                 <img src={balaProfileReal} alt="Bala P - UI/UX Designer" className="w-full h-full object-cover" />
               </div>
-              {/* Larger decorative frame */}
-              <div className="absolute -inset-12 border-4 border-accent/50 animate-pulse rounded-lg px-0 my-0 mx-[61px]"></div>
+              {/* Larger decorative frame with zero border radius */}
+              <div className="absolute -inset-16 border-6 border-accent/50 animate-pulse mx-[61px]"></div>
             </div>
           </div>
         </div>
