@@ -32,7 +32,7 @@ const Portfolio = () => {
       title: "Medical AI Analysis Tool",
       category: "Healthcare Tech",
       description: "User interface and prototypes for AI-powered health analysis application helping medical professionals make data-driven decisions.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop&crop=center",
+      image: "https://i.postimg.cc/ydtjtCS4/black-medi.png",
       tags: ["Healthcare UX", "AI Interface", "Data Visualization", "Prototype"],
       challenges: "Presenting complex medical data in an accessible, actionable format",
       solution: "Developed clear data visualization patterns and streamlined workflows for medical professionals",
