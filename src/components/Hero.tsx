@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import balaProfileReal from "@/assets/bala-profile-real.png";
+
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -8,9 +9,11 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="min-h-screen hero-gradient relative overflow-hidden">
+
+  return (
+    <section className="min-h-screen hero-gradient relative overflow-hidden border-4 border-white/20 rounded-3xl m-4">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden rounded-3xl">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-accent/20 blur-3xl"></div>
         <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-accent rounded-full animate-pulse"></div>
@@ -68,6 +71,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
