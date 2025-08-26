@@ -55,7 +55,7 @@ const Hero = () => {
                 <img src={balaProfileReal} alt="Bala P - UI/UX Designer" className="w-full h-full object-cover" />
               </div>
               {/* Larger decorative frame with zero border radius */}
-              <div className="absolute -inset-16 border-6 border-accent/50 animate-pulse mx-[43px]"></div>
+              <div className="absolute -inset-16 border-6 border-accent/50 animate-pulse mx-0"></div>
             </div>
           </div>
         </div>
