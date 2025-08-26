@@ -1,16 +1,13 @@
-
-
 import { Button } from "@/components/ui/button";
 import balaProfileReal from "@/assets/bala-profile-real.png";
-
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="min-h-screen hero-gradient relative overflow-hidden">
+  return <section className="min-h-screen hero-gradient relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
@@ -41,19 +38,10 @@ const Hero = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-6">
-                <Button 
-                  size="lg" 
-                  className="accent-gradient hover:shadow-accent text-lg px-8 py-6 transition-spring hover-lift"
-                  onClick={() => scrollToSection('portfolio')}
-                >
+                <Button size="lg" className="accent-gradient hover:shadow-accent text-lg px-8 py-6 transition-spring hover-lift" onClick={() => scrollToSection('portfolio')}>
                   View Portfolio
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-white/30 text-white hover:bg-white hover:text-primary text-lg px-8 py-6 transition-spring"
-                  onClick={() => scrollToSection('contact')}
-                >
+                <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white hover:text-primary text-lg px-8 py-6 transition-spring" onClick={() => scrollToSection('contact')}>
                   Contact Me
                 </Button>
               </div>
@@ -61,17 +49,13 @@ const Hero = () => {
           </div>
           
           {/* Profile Image */}
-          <div className="flex-shrink-0">
-            <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-custom-lg border-4 border-white/20 hover-lift">
-                <img 
-                  src={balaProfileReal} 
-                  alt="Bala P - UI/UX Designer" 
-                  className="w-full h-full object-cover"
-                />
+          <div className="flex-shrink-0 mx-0 my-0 px-0 py-0">
+            <div className="relative my-[50px] mx-[50px] px-[70px] py-[8px]">
+              <div className="w-60 h-80 lg:max-w-80 lg:w-7 w-7/12 w-72 rounded-br-full max-w-72 w-72 max-w-7xl rounded-full ">
+                <img src={balaProfileReal} alt="Bala P - UI/UX Designer" className="w-full h-full object-cover" />
               </div>
               {/* Larger decorative frame */}
-              <div className="absolute -inset-12 rounded-full border-4 border-accent/50 animate-pulse"></div>
+              <div className="absolute -inset-12 border-4 border-accent/50 animate-pulse rounded-lg px-0 my-0 mx-[61px]"></div>
             </div>
           </div>
         </div>
@@ -83,9 +67,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
-
