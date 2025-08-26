@@ -40,7 +40,7 @@ const Navigation = () => {
   };
   return <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-custom border-b border-border/50' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16 px-0 mx-0 my-[20px] py-0">
+        <div className="flex items-center justify-between h-16 mx-0 my-[20px] py-0 px-[5px]">
           {/* Logo */}
           <button onClick={scrollToTop} className="flex items-center space-x-2 text-xl font-bold hover:opacity-80 transition-smooth">
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
