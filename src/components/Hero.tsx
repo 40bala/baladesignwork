@@ -50,7 +50,7 @@ const Hero = () => {
           
           {/* Profile Image */}
           <div className="flex-shrink-20 mx-0 my-0 px-0 py-0">
-            <div className="relative my-[50px] mx-[50px] px-[70px] py-[8px]">
+            <div className="relative my-[50px] px-[70px] mx-[50px] py-[10px]">
               <div className="w-60 h-80 lg:max-w-80 lg:w-7 w-7/12 w-72 rounded-br-full max-w-72 w-72 max-w-7xl rounded-full ">
                 <img src={balaProfileReal} alt="Bala P - UI/UX Designer" className="w-full h-full object-cover" />
               </div>
