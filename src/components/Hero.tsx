@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import balaProfileReal from "@/assets/bala-profile-real.png";
-
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -8,9 +7,7 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-
-  return (
-    <section className="min-h-screen hero-gradient relative overflow-hidden border-4 border-white/20 rounded-3xl m-4">
+  return <section className="min-h-screen hero-gradient relative overflow-hidden border-4 border-white/20 rounded-3xl m-4">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden rounded-3xl">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
@@ -52,30 +49,24 @@ const Hero = () => {
           </div>
           
           {/* Profile Image */}
-          <div className="flex-shrink-0">
-            <div className="relative">
-              <div className="w-80 h-96 lg:w-96 lg:h-[480px] rounded-full overflow-hidden">
-                <img 
-                  src={balaProfileReal} 
-                  alt="Bala P - UI/UX Designer" 
-                  className="w-full h-full object-cover" 
-                />
+          <div className="flex-shrink-20 mx-0 my-0 px-0 py-0">
+            <div className="relative my-[50px] mx-[50px] px-[70px] py-[8px]">
+              <div className="w-60 h-80 lg:max-w-80 lg:w-7 w-7/12 w-72 rounded-br-full max-w-72 w-72 max-w-7xl rounded-full ">
+                <img src={balaProfileReal} alt="Bala P - UI/UX Designer" className="w-full h-full object-cover" />
               </div>
-              {/* Decorative frame */}
-              <div className="absolute -inset-4 border-4 border-accent/50 rounded-full animate-pulse"></div>
+              {/* Larger decorative frame with zero border radius */}
+              <div className="absolute -inset-16 border-6 border-accent/50 animate-pulse px-0 mx-[172px]"></div>
             </div>
           </div>
         </div>
         
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center mx-[85px]">
             <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
