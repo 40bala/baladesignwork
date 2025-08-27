@@ -1,9 +1,12 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download } from "lucide-react";
+
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -11,6 +14,7 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const navItems = [{
     label: "About",
     href: "#about"
@@ -24,6 +28,7 @@ const Navigation = () => {
     label: "Contact",
     href: "#contact"
   }];
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId.replace('#', ''));
     element?.scrollIntoView({
@@ -31,6 +36,7 @@ const Navigation = () => {
     });
     setIsMobileMenuOpen(false);
   };
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -38,7 +44,13 @@ const Navigation = () => {
     });
     setIsMobileMenuOpen(false);
   };
-  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-custom border-b border-border/50' : 'bg-transparent'}`}>
+
+  const handleResumeClick = () => {
+    window.open('https://i.postimg.cc/65zk7mV9/Updated-resume-bala.png', '_blank');
+  };
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-custom border-b border-border/50' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 mx-0 py-0 px-[10px] my-[20px]">
           {/* Logo */}
@@ -53,37 +65,66 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item, index) => <button key={index} onClick={() => scrollToSection(item.href)} className={`font-medium hover:text-primary transition-smooth ${isScrolled ? 'text-foreground' : 'text-white/90'}`}>
+            {navItems.map((item, index) => (
+              <button 
+                key={index} 
+                onClick={() => scrollToSection(item.href)} 
+                className={`font-medium hover:text-primary transition-smooth ${isScrolled ? 'text-foreground' : 'text-white/90'}`}
+              >
                 {item.label}
-              </button>)}
+              </button>
+            ))}
             
-            <Button size="sm" className="accent-gradient hover:shadow-accent transition-spring flex items-center space-x-2">
+            <Button 
+              size="sm" 
+              className="accent-gradient hover:shadow-accent transition-spring flex items-center space-x-2"
+              onClick={handleResumeClick}
+            >
               <Download className="w-4 h-4" />
               <span>Resume</span>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <Button variant="ghost" size="sm" className={`md:hidden ${isScrolled ? 'text-foreground' : 'text-white'}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className={`md:hidden ${isScrolled ? 'text-foreground' : 'text-white'}`} 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-border/50 py-4">
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-border/50 py-4">
             <div className="space-y-4">
-              {navItems.map((item, index) => <button key={index} onClick={() => scrollToSection(item.href)} className="block w-full text-left px-4 py-2 text-foreground hover:text-primary hover:bg-primary/5 transition-smooth rounded">
+              {navItems.map((item, index) => (
+                <button 
+                  key={index} 
+                  onClick={() => scrollToSection(item.href)} 
+                  className="block w-full text-left px-4 py-2 text-foreground hover:text-primary hover:bg-primary/5 transition-smooth rounded"
+                >
                   {item.label}
-                </button>)}
+                </button>
+              ))}
               <div className="px-4 pt-2">
-                <Button size="sm" className="w-full accent-gradient hover:shadow-accent transition-spring flex items-center justify-center space-x-2">
+                <Button 
+                  size="sm" 
+                  className="w-full accent-gradient hover:shadow-accent transition-spring flex items-center justify-center space-x-2"
+                  onClick={handleResumeClick}
+                >
                   <Download className="w-4 h-4" />
                   <span>Resume</span>
                 </Button>
               </div>
             </div>
-          </div>}
+          </div>
+        )}
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navigation;
