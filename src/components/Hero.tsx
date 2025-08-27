@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import balaProfileReal from "@/assets/bala-profile-real.png";
+
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -7,7 +8,9 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="min-h-screen hero-gradient relative overflow-hidden border-4 border-white/20 rounded-3xl m-4">
+
+  return (
+    <section className="min-h-screen hero-gradient relative overflow-hidden border-4 border-white/20 rounded-3xl m-4">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden rounded-3xl">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
@@ -51,11 +54,15 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <div className="relative">
-              <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden">
-                <img src={balaProfileReal} alt="Bala P - UI/UX Designer" className="w-full h-full object-cover rounded-full" />
+              <div className="w-56 h-56 lg:w-72 lg:h-72 rounded-full overflow-hidden bg-white/10">
+                <img 
+                  src={balaProfileReal} 
+                  alt="Bala P - UI/UX Designer" 
+                  className="w-full h-full object-contain rounded-full" 
+                />
               </div>
               {/* Decorative accent border */}
-              <div className="absolute -inset-3 border-3 border-accent/30 rounded-full animate-pulse mx-[87px]"></div>
+              <div className="absolute -inset-3 border-3 border-accent/30 rounded-full animate-pulse"></div>
             </div>
           </div>
         </div>
@@ -67,6 +74,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
